@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,IAAI,CAAC;EACH,kBAAkB,EAAE,UAAU;EAC9B,eAAe,EAAE,UAAU;EAC3B,UAAU,EAAE,UAAU;EACtB,SAAS,EAAE,IAAI;CAChB;;AACD,AAAA,CAAC;AACD,CAAC,AAAA,OAAO;AACR,CAAC,AAAA,MAAM,CAAC;EACN,kBAAkB,EAAE,OAAO;EAC3B,eAAe,EAAE,OAAO;EACxB,UAAU,EAAE,OAAO;CACpB",
+    "sources": [
+        "../sass/base/initial.scss"
+    ],
+    "names": [],
+    "file": "initial.css"
+}

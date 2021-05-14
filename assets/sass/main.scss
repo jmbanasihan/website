@@ -1,0 +1,576 @@
+//abstracts
+@import "abstracts/variables";
+// @import "abstracts/mixins";
+// @import "abstracts/placeholders";
+// @import "abstracts/variables";
+
+//vendors
+// @import "vendors/bootstrap";
+// @import "vendors/jquery-ui";
+
+//base
+@import "base/reset";
+@import "base/initial";
+@import "base/typography";
+
+//layout
+// @import "layout/forms";
+@import "layout/grid";
+// @import "layout/header";
+// @import "layout/navigation";
+// @import "layout/sidebar";
+// @import "layout/footer";
+
+//conmponents
+@import "components/buttons";
+// @import "components/carousel";
+// @import "components/cover";
+// @import "components/dropdown";
+
+//pages
+// @import "pages/contact";
+// @import "pages/home";
+
+//themes
+// @import "themes/admin";
+// @import "themes/theme";
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: $COLOR_WHITE;
+}
+
+header,
+section {
+  width: 1440px;
+  display: flex;
+  margin: 0 auto;
+}
+
+header {
+  #header {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2.5rem;
+    gap: 70rem;
+    background: $COLOR_WHITE;
+    #logo {
+      width: 17.6rem;
+      height: 7.3rem;
+      margin-top: 1rem;
+    }
+    #navbar--container {
+      .nav {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 3.5rem;
+        align-items: center;
+        .navbar--list {
+          display: flex;
+          margin-right: 5rem;
+          font-family: $SECONDARY_FONT;
+          font-size: 1.6rem;
+          line-height: 150%;
+          .navbar--links a {
+            text-decoration: none;
+            color: $TEXT_PRIMARY-GRAY;
+            margin: 1.5rem;
+          }
+          .navbar--links:nth-child(1) {
+            font-weight: 700;
+            a {
+              color: $COLOR_BLUE;
+            }
+          }
+        }
+        .navbar--btn-container {
+          background: $COLOR_BLUE;
+          color: $COLOR_WHITE;
+          font-family: $SECONDARY_FONT;
+          font-weight: 500;
+          font-size: 1.4rem;
+          line-height: 150%;
+          border-radius: 0.8rem;
+          text-decoration: none;
+          padding: 1rem;
+        }
+        .navbar--btn-container:hover {
+          background: $COLOR_WHITE;
+          color: $COLOR_BLUE;
+          border: 1px solid $COLOR_BLUE;
+        }
+      }
+    }
+  }
+}
+
+#home {
+  .home-container {
+    padding: 16rem 10.4rem 9.2rem 10.4rem;
+    .row {
+      .column-6 {
+        align-items: center;
+      }
+      .column-6--text {
+        margin-left: -3rem;
+        .home-title-container {
+          font-family: $PRIMARY_FONT;
+          font-weight: 600;
+          font-size: 7.5rem;
+          line-height: 8.6rem;
+          color: $TEXT_PRIMARY-GRAY;
+          margin-top: 8.8rem;
+          margin-left: -10rem;
+        }
+        .home-description-container {
+          font-family: $SECONDARY_FONT;
+          font-weight: 400;
+          font-size: 1.6rem;
+          line-height: 2.4rem;
+          color: $TEXT_SECONDARY-GRAY;
+          margin-top: 4.4rem;
+          margin-left: -40rem;
+        }
+        .home-btn-container {
+          background: $COLOR_BLUE;
+          padding: 1.6rem 4.8rem;
+          border-radius: 0.8rem;
+          margin-left: -68rem;
+          margin-top: 7.2rem;
+          .home-btn {
+            text-decoration: none;
+            color: $COLOR_WHITE;
+            font-family: $SECONDARY_FONT;
+            font-size: 1.4rem;
+            line-height: 2.1rem;
+            font-weight: 500;
+          }
+        }
+        .home-btn-container:hover {
+          background: $COLOR_WHITE;
+          border: 1px solid $COLOR_BLUE;
+          .home-btn {
+            color: $COLOR_BLUE;
+          }
+        }
+      }
+      .column-6--image-container {
+        margin-right: -15rem;
+        margin-top: -15rem;
+        .column-6--image {
+          width: 75rem;
+          height: 75rem;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
+
+#services {
+  padding: 10rem 10.4rem 13.6rem 10.4rem;
+  background: $COLOR_LIGHT-BLUE;
+  width: 100vw;
+  .column-12--services-container {
+    margin: 10rem 10.4rem 13.6rem 10.4rem;
+    width: 123.2rem;
+    align-items: center;
+    justify-content: center;
+    .row--services-title-container {
+      justify-content: center;
+      font-family: $PRIMARY_FONT;
+      font-size: 4.8rem;
+      font-weight: 700;
+      line-height: 6.4rem;
+      color: $TEXT_PRIMARY-GRAY;
+    }
+    .row--services-list-container {
+      margin-top: 7.2rem;
+      gap: 1.6rem;
+      .services-bigger-box-container,
+      .services-box-container {
+        padding-bottom: 1rem;
+        background: $COLOR_WHITE;
+        display: flex;
+        flex-direction: column;
+        border: 0.1rem solid #a0bcf8;
+        padding: 4.8rem 6rem 4.8rem 2.4rem;
+        width: 29.6rem;
+        gap: 3.2rem;
+        position: relative;
+      }
+      .services-box-container:hover {
+        background: $COLOR_BLUE;
+        border: none;
+        .services-description-container,
+        .services-text-container {
+          color: $COLOR_WHITE;
+        }
+      }
+      .services-bigger-box-container {
+        background: $COLOR_BLUE;
+        border: none;
+        .services-description-container,
+        .services-text-container {
+          color: $COLOR_WHITE;
+        }
+      }
+      .services-box-container {
+        margin-bottom: 7.2rem;
+      }
+    }
+  }
+}
+.services-subtitle-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1.6rem;
+  .services-icon {
+    font-size: 4rem;
+    border-radius: 0.8rem;
+    color: #90acf7;
+  }
+  .services-text-container {
+    font-family: $PRIMARY_FONT;
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 3.2rem;
+    color: $TEXT_PRIMARY-GRAY;
+    margin-top: 0.5rem;
+  }
+}
+.services-description-container {
+  font-family: $SECONDARY_FONT;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.4rem;
+  color: $TEXT_SECONDARY-GRAY;
+}
+.right-arrow-icon {
+  background: $COLOR_WHITE;
+  color: $COLOR_BLUE;
+  width: 5.6rem;
+  height: 5.6rem;
+  font-size: 2.4rem;
+  padding: 1.6rem;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+#pricing {
+  margin-top: 30rem;
+  .column-12--pricing-container {
+    gap: 7.2rem;
+    width: 33.6rem;
+    height: 7.2rem;
+    margin-bottom: 80rem;
+    .column-12--pricing-heading-container {
+      gap: 2.4rem;
+      .pricing-title-container {
+        font-family: $PRIMARY_FONT;
+        font-size: 4.8rem;
+        font-weight: 700;
+        line-height: 6.4rem;
+        color: $TEXT_PRIMARY-GRAY;
+        text-align: center;
+      }
+      .pricing-description-container {
+        font-family: $SECONDARY_FONT;
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 2.4rem;
+        color: $TEXT_SECONDARY-GRAY;
+        text-align: center;
+        padding-right: 50rem;
+        padding-left: 47rem;
+      }
+    }
+    .row--pricing-options-container {
+      gap: 1.6rem;
+      text-align: center;
+      .pricing-box-container {
+        display: flex;
+        flex-direction: column;
+        background: $COLOR_WHITE;
+        border-radius: 0.8rem;
+        gap: 3.2rem;
+        align-items: center;
+        width: 75rem;
+        height: 58.5rem;
+        .pricing-value-container {
+          display: flex;
+          flex-direction: column;
+          padding-top: 4rem;
+          .pricing-icon-container {
+            border-radius: 0.8rem;
+            font-size: 17.2rem;
+            margin-bottom: 1rem;
+            i {
+              color: #90acf7;
+            }
+          }
+          .pricing-subtitle {
+            font-family: $PRIMARY_FONT;
+            font-size: 2.4rem;
+            font-weight: 700;
+            line-height: 3.2rem;
+            color: $TEXT_SECONDARY-GRAY;
+          }
+          .pricing-value {
+            font-family: $PRIMARY_FONT;
+            font-size: 4.8rem;
+            font-weight: 700;
+            line-height: 6.4rem;
+            color: $TEXT_PRIMARY-GRAY;
+          }
+        }
+        .pricing-description-container {
+          display: flex;
+          flex-direction: column;
+          gap: 3.2rem;
+          .pricing-text-container {
+            font-family: $SECONDARY_FONT;
+            font-size: 1.6rem;
+            font-weight: 400;
+            line-height: 2.4rem;
+            color: $TEXT_SECONDARY-GRAY;
+            padding-bottom: 3.2rem;
+            .pricing-text {
+              padding-right: 9rem;
+              padding-left: 9rem;
+            }
+          }
+          .pricing-btn-container {
+            border-radius: 0.8rem;
+            background: $COLOR_LIGHT-BLUE;
+            padding: 1.6rem 2.4rem;
+            margin: 0 auto;
+            text-align: center;
+            a {
+              text-decoration: none;
+              color: $COLOR_BLUE;
+              font-size: 1.4rem;
+              font-family: $SECONDARY_FONT;
+              font-weight: 500;
+              line-height: 2.1rem;
+            }
+          }
+        }
+      }
+      .pricing-blue-box-container {
+        display: flex;
+        flex-direction: column;
+        background: $COLOR_BLUE;
+        border-radius: 0.8rem;
+        gap: 3.2rem;
+        align-items: center;
+        width: 60rem;
+        height: 58.5rem;
+        .pricing-value-container {
+          display: flex;
+          flex-direction: column;
+          padding-top: 4rem;
+          .pricing-icon-container {
+            border-radius: 0.8rem;
+            font-size: 17.2rem;
+            margin-bottom: 1rem;
+            i {
+              color: #90acf7;
+            }
+          }
+          .pricing-subtitle {
+            font-family: $PRIMARY_FONT;
+            font-size: 2.4rem;
+            font-weight: 700;
+            line-height: 3.2rem;
+            color: $COLOR_WHITE;
+          }
+          .pricing-value {
+            font-family: $PRIMARY_FONT;
+            font-size: 4.8rem;
+            font-weight: 700;
+            line-height: 6.4rem;
+            color: $COLOR_WHITE;
+          }
+        }
+        .pricing-description-container {
+          display: flex;
+          flex-direction: column;
+          gap: 3.2rem;
+          .pricing-text-container {
+            font-family: $SECONDARY_FONT;
+            font-size: 1.6rem;
+            font-weight: 400;
+            line-height: 2.4rem;
+            color: $COLOR_WHITE;
+            padding-bottom: 3.2rem;
+            .pricing-text {
+              padding-right: 4rem;
+              padding-left: 4rem;
+            }
+          }
+          .pricing-btn-container {
+            border-radius: 0.8rem;
+            background: $COLOR_LIGHT-BLUE;
+            padding: 1.6rem 2.4rem;
+            margin: 0 auto;
+            text-align: center;
+            a {
+              text-decoration: none;
+              color: $COLOR_BLUE;
+              font-size: 1.4rem;
+              font-family: $SECONDARY_FONT;
+              font-weight: 500;
+              line-height: 2.1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#faq {
+  height: 72.8rem;
+  margin-top: 20rem;
+  .row--faq-container {
+    gap: 1.6rem;
+    .column-6--faq-title-container {
+      padding-left: 15rem;
+      .faq-title {
+        font-family: $PRIMARY_FONT;
+        font-size: 4.8rem;
+        font-weight: 700;
+        line-height: 6.4rem;
+        color: $TEXT_PRIMARY-GRAY;
+      }
+      .faq-description {
+        font-family: $SECONDARY_FONT;
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 2.4rem;
+        color: $TEXT_SECONDARY-GRAY;
+        margin-top: 2.4rem;
+        margin-bottom: 4rem;
+        padding-right: 15rem;
+      }
+      .faq-link {
+        font-family: $SECONDARY_FONT;
+        font-size: 1.4rem;
+        font-weight: 500;
+        line-height: 2.1rem;
+        color: $COLOR_BLUE;
+        text-decoration: none;
+        position: relative;
+      }
+      .faq-link:hover {
+        font-weight: 700;
+      }
+    }
+    .column-6--faq-list-container {
+      gap: 1.6rem;
+      .faq-question-box {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border-radius: 0.8rem;
+        padding: 1.6rem;
+        width: 50.4rem;
+        background: $COLOR_LIGHT-BLUE;
+        .faq-question {
+          font-family: $SECONDARY_FONT;
+          font-size: 1.6rem;
+          font-weight: 500;
+          line-height: 2.4rem;
+          color: $TEXT_SECONDARY-GRAY;
+          padding-right: 0;
+        }
+        .faq-icon {
+          font-size: 2rem;
+          color: $TEXT_SECONDARY-GRAY;
+        }
+        .faq-icon:hover {
+          color: $COLOR_BLUE;
+          font-size: 2.5rem;
+        }
+      }
+    }
+  }
+}
+
+#footer {
+  background: $COLOR_LIGHT-BLUE;
+  width: 100vw;
+  .column-12--footer-container {
+    align-items: center;
+    padding-top: 6.4rem;
+    gap: 5rem;
+    .footer-logo-container {
+      width: 13.2rem;
+      height: 3rem;
+      margin-right: 6rem;
+      margin-bottom: 2.5rem;
+    }
+    .footer-link-container {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 4.8rem;
+      .footer-link a {
+        font-family: $SECONDARY_FONT;
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 2.4rem;
+        color: $TEXT_PRIMARY-GRAY;
+        text-decoration: none;
+      }
+      .footer-link a:hover {
+        color: $COLOR_BLUE;
+        font-weight: 700;
+      }
+    }
+    .footer-socmed-container {
+      display: flex;
+      flex-direction: row;
+      gap: 1.6rem;
+      .footer-link-socmed a {
+        display: inline-block;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 4rem;
+        background: #90acf7;
+        color: $COLOR_WHITE;
+        font-family: $SECONDARY_FONT;
+        font-size: 1.6rem;
+        font-weight: 700;
+        line-height: 2.4rem;
+        text-decoration: none;
+        text-align: center;
+        padding-top: 0.8rem;
+      }
+    }
+    .footer-link-socmed a:hover {
+        background: $COLOR_WHITE;
+        color: #90acf7;
+    }
+    .copyright-container {
+      font-family: $SECONDARY_FONT;
+      font-size: 1.6rem;
+      font-weight: 500;
+      line-height: 2.4rem;
+      color: $TEXT_PRIMARY-GRAY;
+      padding-bottom: 6.4rem;
+    }
+  }
+}
+
+hr {
+  display: block;
+  background: #a0bcf8;
+  width: 123.3rem;
+  height: 1px;
+  border: 1px;
+}

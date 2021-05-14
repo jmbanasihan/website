@@ -1,0 +1,98 @@
+.btn {
+    display: inline-block;
+    font-family: $SECONDARY_FONT;
+    background: $COLOR_PRIMARY;
+    color: white;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.5;
+    text-decoration: none;
+    border-radius: 1.5rem;
+    border: 1px solid transparent;
+    padding: 1.4rem;
+    margin: 0.5rem;
+}
+
+//type of button
+
+.btn--icon-left {
+    gap: 1rem;
+    font-size: 1.6rem;
+    line-height: 2.4;
+    padding: 1.6rem;
+}
+
+.btn--icon-right {
+    gap: 0.5rem;
+    font-size: 1.6rem;
+    line-height: 2.4;
+    padding: 1.6rem;
+}
+
+.btn--icon-only {
+    font-size: 1.6rem;
+    line-height: 2.4;
+    padding: 1.6rem;
+    width: 5.4rem;
+    vertical-align: middle;
+    text-align: center;
+}
+
+//state of colors
+
+.btn--primary {
+    background: $COLOR_PRIMARY;
+    color: white;
+}
+
+.btn--secondary {
+    background: $COLOR_GRAY_MEDIUM;
+    color: $COLOR_TEXT;
+}
+
+.btn--disabled {
+    background: $COLOR_GRAY_MEDIUM;
+    color: $COLOR_GRAY-DARK;
+}
+
+//sizes
+
+.btn--large {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    padding: 1.6rem;
+}
+
+.btn--medium {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    padding: 1.6rem;
+}
+
+.btn--small {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    padding: 1.1rem;
+}
+
+//colors
+
+.btn--primary {
+    background: $COLOR_PRIMARY;
+    color: white;
+}
+
+.btn--success {
+    background: $COLOR_GREEN;
+    color: white;
+}
+
+.btn--warning {
+    background: $COLOR_ORANGE;
+    color: white;
+}
+
+.btn--error {
+    background: $COLOR_RED;
+    color: white;
+}
